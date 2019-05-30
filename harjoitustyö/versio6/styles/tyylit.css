@@ -1,0 +1,190 @@
+/* väriteemaideoita <a href="https://visme.co/blog/website-color-schemes/"></a> */
+
+/*nollattu alussa selaimien marginaaliasetukset*/
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { 
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Patrick Hand SC', cursive;
+}
+main {
+    text-align: center;
+}
+#header_navigationbar {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    align-self: center;
+  } 
+.headernavi_boxi a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.headernavi_boxi {
+    padding:0.5em;
+}
+nav a:hover {
+    font-weight: bold;
+}
+.active a {
+    text-decoration: underline;
+}
+/* Headerin iso pääotsikko kuvan päällä */
+.header_container {
+    width: 80%;
+    background-image: url("../images/Header_polkukoodi.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.headertext_container {
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.header_text {
+    margin: 5em;
+    color:white;
+    text-shadow: 4px 4px gray;
+}
+.header_text h1 {
+    text-align: center;
+    font-size: 2em;
+}
+/* sivun pääsisältö 80% leveydellä keskitettynä, 
+flexit osat allekkain */
+main {
+    width: 80%;
+    display: flex;
+    /* background-color:blueviolet; */
+    flex-direction: column;
+    justify-content: center;
+}
+aside div, .päälohko {
+    margin: 1em 0em;
+}
+.päälohko {
+    display: flex;
+    flex-direction: column;
+}
+.alalohko {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+}
+.vasen {
+    padding-right: 1em;
+    flex:2;
+}
+.oikea {
+    padding-left: 1em;
+    flex:1;
+}    
+h2, h3, p {
+padding: 0.5em 0em;
+}
+.lohko img {
+    padding-top: 1em;
+}
+#jaettu {
+    display: flex;
+    flex-direction: column;
+}
+#neuletakki {
+    width: 80%;
+    height: auto;
+}
+#kukkia {
+    width: 80%;
+    height: auto;
+}
+#linkedin {
+    width: 30%;
+    height: auto;
+    padding: 0em;
+}
+.tietoloota {
+    border: 2px solid black;
+    margin:1em 0em;
+    box-shadow: 4px 4px gray;
+}
+/* kuvalinkkiboxit rivissä, wrappautuvat,  */
+.navigation_boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navigation_boxes a:hover img {
+    opacity: 0.5;
+}
+/* kuvalinkkiboxien muotoilut */
+.boxi {
+    flex: 25%;
+    position: relative;
+}
+.kuvalinkki {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.boxi_mobile {
+    flex:100%;
+}
+.boxi img, .boxi_mobile img {
+    width: 100%;
+}
+
+/* FOOTER */
+/* tästä flexi jos sisältöä tulee enemmän */
+
+footer {
+    width: 80%;
+    height: 1.875em;
+    /* background-color:#E49A2F; */
+    text-align: center;
+    color: black;
+}
+.boxi_mobile {
+    display: none;
+}
+
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    .navigation_boxes, aside, .alalohko {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header_container, #header_navigationbar, main {
+        width: 100%;
+    }
+    .boxi_mobile {
+        display: block;
+    }
+    .boxi {
+        display: none;
+    }
+    * {
+        font-size: 1.1em;
+    }
+    .headernavi_boxi a {
+        font-size: 1.5em;
+    }
+    .header_text h1 {
+        font-size: 2.5em;
+    }
+}

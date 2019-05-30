@@ -1,0 +1,126 @@
+/* väriteemaideoita <a href="https://visme.co/blog/website-color-schemes/"></a> */
+
+/*nollattu alussa selaimien marginaaliasetukset*/
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* allekkain järjestäytyvät osiot bodyssa */
+body { 
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Patrick Hand SC', cursive;
+    /* background-color:lightblue;   */
+}
+
+/* HEADER, kuva taustalla, navi ja headerteksti 
+kuvan päällä läpinäkyvinä */
+.header_container {
+    width: 80%;
+    background-image: url("../images/headerPaula-maastossa2.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    border: 2px solid black;
+}
+/* navigation bar sisältää rivissä 
+flexit osiot headernavi_name ja unordered list */
+#header_navigationbar {
+    width: 80%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    align-self: center;
+  } 
+/* nimi otsikkona navilistan alussa */
+/* #headernavi_name {
+    
+} */
+.headernavi_boxi a {
+    /* background-color: blue; */
+    color: black;
+    text-decoration: none;
+}
+/* Headerin iso pääotsikko kuvan päällä */
+.headertext_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.header_text {
+    margin: 5em;
+    /* width: 70%; */
+}
+.header_text h1 {
+    text-align: center;
+    /* background-color: chartreuse; */
+}
+/* sivun pääsisältö 80% leveydellä keskitettynä, 
+flexit osat allekkain */
+main {
+    width: 80%;
+    display: flex;
+    /* background-color:blueviolet; */
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
+}
+/* mainin levyinen keskitetty testiosio ja kuva alla */
+aside {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+aside img {
+    border-radius: 50%;
+}
+.who, #myphoto {
+    padding:2em;
+}
+/* kuvalinkkiboxit rivissä, wrappautuvat,  */
+.navigation_boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+/* kuvalinkkiboxien muotoilut */
+.boxi {
+    width: 15em;
+    height: 15em;
+    background-color: yellow;
+    margin: 1em;
+
+}
+.boxi img {
+    width: 15em;
+    height: 15em;
+    border: 2px solid black;
+}
+/* FOOTER */
+/* tästä flexi jos sisältöä tulee enemmän */
+
+footer {
+    width: 80%;
+    height: 1.875em;
+    /* background-color:#E49A2F; */
+    text-align: center;
+    color: black;
+    border: 2px solid black;
+}
+
+/* tarkista nämä vielä kohdilleen lopussa */
+@media screen and (max-width: 575px) {
+    .navigation_boxes, aside {
+        flex-direction: column;
+        align-items: center;
+    }
+  }

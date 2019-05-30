@@ -1,0 +1,81 @@
+/*color palette: <a href https://www.canva.com/learn/wp-content/uploads/2016/01/Palette_28-tb-800x0.jpg>""</a>*/
+/*nollattu alussa selaimien marginaaliasetukset*/
+ * {
+    margin: 0;
+    padding: 0;
+}
+body { 
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke; 
+    margin: 0px auto;   
+}
+/*banneri ja navi yhtä leveinä, kokosivun leveys*/
+.banner {
+    text-align:center;
+    height: 100px;
+    background-color: #4CDEF5;
+    margin:0px 0px 0px 0px;
+    color:white;
+    padding-top: 50px; 
+}
+/*navigointipalkki linkkilistasta tehtynä*/
+#navi {
+    list-style-type: none;
+    background-color: #A4D555;
+    font-size: 1.2em;
+    padding: 10px;
+    margin:0px 0px 0px 0px;
+}
+#navi li {
+    display: inline;
+    padding: 5px;
+}
+#navi a {
+    color:white;
+}
+img {
+    border-radius: 30%;
+    margin: 15px;
+    border: solid 20px #A4D555;           
+}
+/*alaotsikoissa ja tekstikappaleissa enemmän marginaalia kuin bannerissa ja navissa*/
+h2 {
+    color:white;
+    background-color:#FF5992;
+    padding: 10px;
+    margin: 30px
+}
+p {
+    text-align:left;
+    margin: 20px 30px;
+}
+/*Etusivun ensimmäinen teksti keskitetty*/
+.intro{
+    text-align:center;
+}
+/*Listat, jotka eivät ole navissa, on tällä tyylitelty*/
+#list {
+    text-align:left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    list-style-type:square;
+    list-style-position: inside; 
+    margin: 30px;           
+}
+/*linkkien tyylit */
+a:link, a:visited {
+    color:#841983;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color:red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+/*alaosan yhteystiedot-kenttä*/
+#mail {
+    background-color: #841983;
+}
+

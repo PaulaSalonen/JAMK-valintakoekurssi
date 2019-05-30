@@ -1,0 +1,252 @@
+/* väriteemaideoita <a href="https://visme.co/blog/website-color-schemes/"></a> */
+
+/*nollattu alussa selaimien marginaaliasetukset*/
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* flexi body, jossa sisältö allekkain keskitetysti */
+body { 
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* NAVIpalkki flexinä headerin yläpuolella 80% levyisenä */
+#header_navigationbar {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    align-self: center;
+  } 
+.headernavi_boxi a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.headernavi_boxi {
+    padding:0.5em;
+}
+/* navigointipalkin linkkien hover-ominaisuudet */
+nav a:hover {
+    font-weight: bold;
+}
+.active a {
+    text-decoration: underline;
+}
+
+/* HEADER 80% levyisenä flexinä sisältö allekkain */
+.header_container {
+    width: 80%;
+    background-image: url("../images/Header_polkukoodi.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+/* Headerin tekstin laatikko, tarviiko nyt olla enää erikseen kun siirretty navi???? */
+.headertext_container {
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* Headerin iso pääotsikko kuvan päällä */
+.header_text {
+    margin: 5em;
+    color:white;
+
+}
+.header_text h1 {
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 3px 3px black;
+}
+
+/* sivun pääsisältö 80% leveydellä keskitettynä, 
+flexit osat allekkain */
+main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* border:2px solid red; */
+}
+h2, h3, p {
+    margin:0.5em;
+    padding: 0.5em; 
+}
+p {
+    text-align: justify;
+    padding: 0em 0.5em;
+}
+/* Mainin sisällä allekkain olevat osiot */
+.päälohko {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    /* border:2px solid blue; */
+}
+/* Mainin päälohkon sisällä vierekkäin olevat osiot */
+.alalohko {
+    display: flex;
+    flex-direction: column;
+    /* border:2px solid orange; */
+}
+
+/* Mainin alalohkon sisällä allekkain olevat osiot */
+.lohko {
+    /* border:2px solid green; */
+}
+
+/* Etusivun kuvalinkkiboxit rivissä  */
+.navigation_boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:1em;
+    margin-bottom: 1em;
+}
+.navigation_boxes a:hover img {
+    opacity: 0.5;
+}
+/* Etusivun kuvalinkkiboxin yksittäinen ruutu */
+.boxi {
+    flex: 25%;
+    position: relative;
+    /* border: 0.5px solid black; */
+    box-shadow: 0 0 15px black;
+}
+/* linkkiboxien kuvat */
+.boxi img, .boxi_mobile img {
+    width: 100%;
+}
+
+/* mobiililevyiset linkkiboxit, ei näy laajakuvassa */
+.boxi_mobile {
+    flex:100%;
+    display: none;
+}
+/* Etusivun kuvaus osio */
+.kuvaus {
+    width: 70%;
+    align-self: center;
+}
+/* Harrastusten kuvagalleria lightboxina */
+#kuvagalleria {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    border: 4px solid black;
+    padding: 0.5em;
+}
+
+
+/* Koodaus sivun taulukko */
+table, th, td, table caption {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding:0.5em;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+table caption {
+    font-weight: bold;
+}
+.taulukko {
+    overflow-x:auto;
+    width: 70%;
+    align-self: center;
+    padding: 1em;
+}
+
+/* KUVAT */
+#koodari {
+    max-width: 80%;
+    padding:0.5em;
+}
+#myphoto {
+    max-width: 20%;
+    margin:1.5em;
+    align-self: center;
+    border-radius: 50%;
+    box-shadow: 0 0 30px black;
+}
+
+#sanapilvi {
+    font-family: 'Lakki Reddy', cursive;
+    padding:0;
+    margin-top:2em;
+    margin-bottom:0.5em;
+    font-size: 1.5em;
+}
+#git {
+    width: 80%;
+    height: auto;
+    padding: 0.5em;
+}
+/* Biologia-osan linkkikuva */
+#logo {
+    width: 20%;
+    height: auto;
+    padding: 0.5em;
+}
+.oikea{
+    flex:20%;
+}
+.vasen {
+    flex:80%;
+}
+
+    
+/* FOOTER */
+footer {
+    width: 80%;
+    height: 1.875em;
+    color: black;
+    margin-top:3em;
+}
+footer p {
+    text-align: center;
+}
+
+/* Responsiivisuus */
+@media (min-width: 320px) and (max-width: 1024px) {
+    .navigation_boxes, aside, .alalohko {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header_container, #header_navigationbar, main {
+        width: 100%;
+    }
+    .boxi_mobile {
+        display: block;
+    }
+    .boxi {
+        display: none;
+    }
+    * {
+        font-size: 1.1em;
+    }
+    .headernavi_boxi a {
+        font-size: 1.5em;
+    }
+    .header_text h1 {
+        font-size: 2.5em;
+    }
+    .taulukko {
+        width: 100%;
+    }
+    .kuvaus {
+        width: 100%;
+    }
+}

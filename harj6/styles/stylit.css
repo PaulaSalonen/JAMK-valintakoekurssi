@@ -1,0 +1,122 @@
+/*nollattu alussa selaimien marginaaliasetukset*/
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { 
+    text-align:left;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-size: 100%;
+    background-color:white; 
+}
+main {
+    max-width: 90%;
+    margin-left:auto;
+    margin-right: auto;
+}
+header {
+    background-color: #575757;
+    text-align: center;
+    color:#F0EBEB;
+    letter-spacing: 0.1875em;
+    padding-top:1em;
+    padding-bottom: 1em;
+    font-size: 200%;
+    font-family: 'Patrick Hand SC', cursive;
+}
+nav, footer {
+    height: 1.875em;
+    background-color:#E49A2F;
+    text-align: center;
+    color: #F7F5EE;
+}
+/* content-osion floatit clearattu */
+footer {
+    clear: left;
+}
+nav {
+    text-transform: uppercase;
+}
+/* menun navigointipalkki linkkilistasta tehtynä*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E49A2F;
+    text-align: center;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 1.1em;
+  }
+li {
+    display: inline;
+}
+li a {
+    display: inline-block;
+    color: white;
+    padding: 0.18em 1em;
+    text-decoration: none;
+  }
+/*menulinkkien värin muutos hover-tilassa ja aktiivisena */
+a:hover:not(.active) {
+    background-color: rgb(153, 102, 31);
+  }
+.active {
+    background-color:rgb(153, 102, 31);
+  }
+/* varsinainen sivun sisältö contentin sisällä kahdessa laatikossa floatilla */
+section {
+    background-color: #D8CCAF;
+    width: 100%;
+    overflow: auto;
+}
+section.content_left {
+    float: left;
+    margin-left:2.7em;
+}
+section.content_right {
+    float: right;
+    margin-right:2.7em;
+}
+.content_left, .content_right {
+    width: 45%;
+    border-radius: 8%;
+    padding:1.25em;
+    color: black;
+    background-color: #F7F5EE;
+    border: 1px solid #AC9675;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 2.7em;
+    margin-bottom: 2.7em;
+}
+/* kuva float-osion sisällä */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8%;
+    display: block;
+    margin: 1.5em auto;
+}
+#footer p {
+   padding: 5px;
+}
+h2, h3 {
+    text-align: center;
+    margin:10px;
+    color:#D9B08C;
+    font-family: 'Patrick Hand SC', cursive;
+}
+p {
+    font-family: 'Nunito', sans-serif;ont-family: 'Just Another Hand', cursive;
+}
+.ikoni {
+    color:gray;
+    padding-left: 0.5em;
+    font-size: 1.5em;
+}
+.valikko {
+    color: #575757;
+    padding-right: 0.25em;
+}

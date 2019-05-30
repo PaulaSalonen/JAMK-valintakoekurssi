@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Raportti Paula Salonen
+        </title>
+        <style>
+            body {
+                max-width: 960px;
+                margin:auto;
+                text-align: justify;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Web-tekniikat kurssin <a target="blank" href="https://student.labranet.jamk.fi/~M9719/web_tekniikat/harjoitustyo/">harjoitustyön</a> raportti - Paula Salonen</h1>
+        <h2><a target="blank" href="https://student.labranet.jamk.fi/~M9719/web_tekniikat/harjoitustyo/Synopsis">1. Synopsis</a></h2>
+        <h2><a target="blank" href="https://student.labranet.jamk.fi/~M9719/web_tekniikat/harjoitustyo/Rakennekaavio">2. Rakennekaavio</a></h2>
+        <h2><a target="blank" href="https://student.labranet.jamk.fi/~M9719/web_tekniikat/harjoitustyo/LayOutit">3. LayOut suunnitelma sivustolle</a></h2>
+        <h2>4. Testaamistulokset sekä validaattorin tulokset kommentoituna</h2>
+        <p> Millä selaimilla (voi olla myös Opera) ja selainversioilla testattu.
+            Validatorin kautta ajamisen tulokset ja mahdollisten virheiden korjaus.</p>
+        <h2>5. Resurssien erittely</h2>
+            <h3>Yleissuunnittelu:</h3>
+                <p>Etsin ensin netistä ideoita itseä kiinnostavista sivustomalleista, ajatuksenani oli, 
+                    että haluan etusivulle kuvalaatikoita, joita klikkaamalla pääsee sivuston eri osioihin.
+                    <br><br>
+                    Löysin muutamia erilaisia ideaan sopivia sivuja, mutta suurin osa malleista oli Pinterest-kuvia 
+                    eikä niissä ollut linkkiä mihinkään oikeaan sivustoon, josta olisi päässyt kurkkaamaan koodia.
+                    <br><br>
+                    Yhden hyvän <a target="blank" href="http://heathershaw.com/">sivun</a> löysin artikkelista, jossa oli listattu hyviä layoutteja.
+                    Siitä sai hyviä ideoita, mutta sen toteutuksessa ei ollut käytetty flexboxia ja halusin nimenomaan sillä menetelmällä 
+                    tehdä sivun, jotta oppisin samalla uuden menetelmän ja se olisi varmasti helpommin responsiivinen.
+                    <br><br>
+                    Sivuston sisällön ideointi oli helppoa, koska minulla on jo yksi ammatti ja työkokemus ja halusin sen 
+                    tuoda myös sivustolle mukaan näkyviin. 
+                    <br><br>
+                    Haasteena itselle on, että osaisin käyttää tarpeeksi neutraalia ja tyylikästä 
+                    väriteemaa, koska minulla on taipumus käyttää omia mielivärejäni, 
+                    jotka eivät välttämättä kaikissa tilanteissa  ole optimaalisimpia.
+                </p>
+            <h3>Layout ja sen toteutus:</h3>
+                <p>Hahmoittelin layoutin piirrustusohjelmalla ja se selkeytti samalla hyvin mistä rakenteista kannattaa aloittaa ja mitkä on ns. 
+                    kokeiltavia juttuja lopuksi. Luin W3Schoolsista ja quackit.com-sivustolta Flexboxin käytöstä ja loin ensin flexbox-rungon.
+                    <br><br>
+                    Halusin aluksi sekä navibaarin ja otsikkotekstin headerin kuvan päälle ja se toi hieman mutkikkuutta matkaan, kun kikkailin 
+                    miten saan asetettua otsikon keskelle ja navin yläreunaan. Vasta paljon myöhemmin kun valitsin hyviä kuvia sivulle tajusin, 
+                    ettei navi sopinut kuvan päälle millään. Se oli onneksi siinä vaiheessa helppo siirtää vain headerin yläpuolelle omana osionaan. 
+                    Headerin leveyttä suhteessa main-osioin teksteihin ja laatikoihin mietin monesti, 
+                    mutta päädyin lopulta kuienkin pitämään ne yhtä leveinä, jopa laajakuvassa, koska se näytti harmonisemmalta.
+                    <br><br>
+                    Pohdin pitääkö navi tehdä linkkilistasta (ul) vai riittääkö että on pelkkiä flexboxeja vierekkäin. Päädyin luopumaan listarakenteesta, 
+                    koska jossain ohjeessa oli myös tehty niin navi. Silti jäin miettimään onkohan sillä vaikutusta esim. saavutettavuuden kannalta?
+                    <br><br>
+                    Sivun keskelle suunnittelemani linkkilaatikot oli yllättävän helppo toteuttaa, tosin tein niistä ensin yksinkertaiset ja mietin lopuksi 
+                    jääkö minulle aikaa kikkailla niihin esim erilaisia hover-tiloja tai tekstejä.
+                    <br><br>
+                    Rensponsiivisuuden toteutus mietitytti aluksi ja ajattelin varata siihen aikaa, mutta se olikin paljon yksinkertaisempi toteuttaa kuin pelkäsin.
+                    Löysin Githubista <a target="blank" href="https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488">sivun</a>, jossa oli hyvin eritelty eri mobiililaitteiden 
+                    resoluutioita, mikä auttoi saamaan sivun toimimaan kännykällä, koska ensimmäinen 
+                    yritys w3schoolsin esimerkin mukaan ei toiminut omalla puhelimellani ainakaan. Turvallisen suunnitelualan huomioin sillä, että sivu on täysin responsiivinen, 
+                    jolloin ei tarvitse esim. rajata sivua vakiosti tietyn kokoiseksi.
+                    <br><br>
+                    Ulkoasua piti muokata uudelleen alasivujen sisällön syöttämisen yhteydessä, koska en ollut miettinyt alasivujen rakennetta niin tarkkaan kuin etusivun. 
+                    Aloitin uudelleen sivujen rakenteen teon muokkaamalla sisäkkäisiä flexboxeja joissa vuorottelee allekkain ja vierekkäin olevat osiot.
+                    Sen jälkeen sisällön syöttäminen oli helpompaa, vaikkakin jouduin vielä muuttamaan senkin jälkeen lohkoja, koska en tarvinnutkaan niin paljoa sisäkkäisiä 
+                    ominaisuuksia kun valmiiksi pohjustin.
+                    <br><br>
+                     Olen tehnyt hirveästi erilaisia mielestäni hienoja ratkaisuja ja karsinut sitten niitä kun 
+                    ne eivät toimineetkaan otsikkokuvan kanssa ja osa oli liian mauttomia ja välillä oli ihan liikaa kuvia sivulla. Päädyin luopumaan otsikkokuvan päällä olevasta 
+                    navipalkista koska se ei erottunut kunnolla, vaikka sen tekemiseen meni paljon aikaa. Olisin halunnut myös keskittyä etusivun kuvalinkkiboxeihin enemmän ja tehdä 
+                    niihin hover-tilassa olevat tekstit tai paremmat efektit. Onneksi jätin homman viimeiseksi koska en millään enää ehdi niihin.
+                </p>
+            <h3>Sisällön syöttäminen:</h3>
+                <p>Aloitin sisällön syöttämisen etusivulta sen jälkeen kun olin tehnyt ulkoasun. Vasta valmiin etusivun jälkeen uskalsin siirtyä alasivujen sisöltöihin. 
+                    En ollut suunnitellut niiden rakennetta niin tarkkaan kuin etusivua, joten hahmottelin sisältöä 
+                    suunnitellessa lisää rakenteita niin, että ne olisivat pohjimmiltaan toistuvia eri alasivuilla. Halusin kuitenkin kunkin alasivun alle erilaisia "kokeiluja" 
+                    kuten kuvagalleriaa, taulukkoa jne.
+                    <br><br>
+                    Etusivun sisällön täyttäminen oli nopeaa, mutta alasivujen kanssa menin hetkeksi solmuun. En ollut miettinyt niiden layouttia tarpeeksi tarkkaan valmiiksi 
+                    ja yritin samalla tehdä muotoilua kun lisäsin asioita sivulle. 
+                    Lopputuloksena oli kaoottinen css-tidosto ja epäjohdonmukaiset alasivut. Ajatus oli laittaa erilaisia asioita alasivuille eri tavoilla, mutta päädyin muokkaamaan 
+                    sivuille selkeämmän yhtenäisen rakenteen, joiden alle voi sisällyttää 
+                    erilaisia osioita esim taulukoita, kuvia ja listoja.
+                </p>
+            <h3>Testaaminen/korjaaminen:</h3>
+                <h4>Index.html</h4>
+                    <ul>
+                        <li>Section lacks heading. Eli otsikko ei ollut kuvauksen sisäpuolella vaan erillisenä divinä mainin alla.</li>
+                        <li>End tag p seen, but there were open element. Johtui seuraavasta virheestä: Unclosed element span (footterissa).</li>
+                        <li>Consider using the h1 element as a top-level heading only (all h1 elements are treated as top-level headings 
+                            by many screen readers and other tools).: En korjannut, koska otsikko muodostuu kahdesta osasta, joista toinen on navipalkissa</li>
+                    </ul>
+                <h4>Harrastukset.html</h4>
+                    <ul>
+                        <li>Bad value images/Peruskaava2Pidempi – kopio.jpg for 
+                            attribute href on element a: Illegal character in path segment: space is not allowed
+                            Eli kuvan nimessä oli välilyöntejä.
+                        </li>
+                        <li>Bad value images/Peruskaava2Pidempi – kopio.jpg 
+                            for attribute src on element img: Illegal character in path segment: space is not allowed.
+                            Liittyi edelliseen virheeseen kuvagallerian kuvassa.
+                        </li>
+                        <li>Sama virhe toistui vielä kolmessa muussakin kuvagallerian kuvassa.</li>
+                        <li> Section lacks heading. Muutin div:ksi (kuvagallerian).</li>
+                        <li>The text content of element script was not in the required format: 
+                            Expected space, tab, newline, or slash but found l instead.
+                            Ihmettelinkin miksei kuvanvaihtonuoli näy galleriassa mutta en keksinyt mistä johtui.
+                        Olin vahingossa karsinut head-osiosta linkin lightboxiin lisäksi olin laittanut kaikki 
+                        scriptit samojen tagien sisään.</li>
+                    </ul>
+                <h4>Biologia.html</h4>
+                    <p>ei virheilmoituksia</p>
+                <h4>Tuotteistaminen.html</h4>
+                    <ul>
+                        <li>Stray end tag a. Kuvan perään oli hypännyt linkin sulkumerkki vaikka kyse ei ollut linkkikuvasta.</li>
+                    </ul>
+                <h4>Koodaaminen.html</h4>
+                    <ul>
+                        <li>Section lacks heading. Taulukossa. Muutin div:ksi</li>
+                    </ul>
+                <h4>Muuta</h4>
+                    <p>Marginaalit ja fonttien koot meinaavat mennä kokoajan sekaisin eri alasivujen välillä. Luulin jo saaneeni melko valmiin sivun, kun huomasin, että mobiililla 
+                        jostain syystä navi:n otsikon koko muuttuu alasivuille hypätessä. Johtui mobiilikokoisen sivun tekstien suurennoksista, jotenkin eivät osuneet etusivuun 
+                        samanlailla kuin muihin. Jostain syystä vika muuttui koskemaan etusivun p-elementtejä kun yritin korjata... Vika näyttää koskevan kaikkea etusivun tekstimuotoilua.</p>
+            <h3>Dokumentointi:</h3>
+                <p></p>
+        <h2>6. Kommentit harjoitustyöstä ja itsearvio sivuista</h2>
+        <p>Miten koki harjoitustyön tekemisen mielekkyyden, parannusehdotuksia
+            Kuinka paljon aikaa sivuston tekemiseen kului kaiken kaikkiaan (suunnittelu, sisältöjen miettiminen, kirjoitus, käyttöliittymä, koonti & kasaus, testaaminen/validointi, virheiden korjaus, viimeistely ym.)
+           Arvioi oma näkemyksesi web-sivuistasi (sisältö, ulkonäkö, tekninen ja raportointi), anna kokonaisarvosanaehdotus harjoitustyöstäsi.</p>
+    </body>
+</html>

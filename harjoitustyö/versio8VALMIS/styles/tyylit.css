@@ -1,0 +1,216 @@
+/* väriteemaideoita <a href="https://visme.co/blog/website-color-schemes/"></a> */
+
+/*nollattu alussa selaimien marginaaliasetukset*/
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* flexi body, jossa sisältö allekkain keskitetysti */
+body { 
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+}
+
+/* NAVIpalkki flexinä headerin yläpuolella 80% levyisenä */
+#header_navigationbar {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    align-self: center;
+  } 
+.headernavi_boxi a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.headernavi_boxi {
+    padding:0.5em;
+}
+/* navigointipalkin linkkien hover-ominaisuudet */
+nav a:hover {
+    font-weight: bold;
+}
+.active a {
+    text-decoration: underline;
+}
+
+/* HEADER 80% levyisenä flexinä sisältö allekkain */
+.header_container {
+    width: 80%;
+    background-image: url("../images/Header_polku.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+/* Headerin iso pääotsikko kuvan päällä */
+.header_text {
+    margin: 5em;
+    color:white;
+}
+.header_text h1 {
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 3px 3px black;
+} 
+
+/* sivun pääsisältö 80% leveydellä keskitettynä, 
+flexit osat allekkain */
+main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h3, p {
+    margin:0.5em;
+
+}
+h2 {
+    margin:1em 0.5em 0.5em 0.5em;
+}
+p {
+    text-align: justify;
+    padding: 0em 0.5em;
+}
+
+/* Mainin sisällä allekkain olevat osiot */
+.kuvaus {
+    width: 70%;
+    margin-bottom:1em;
+}
+.rivit {
+    display: flex;
+    flex-direction: row;
+}
+.oikea{
+    flex:20%;
+}
+.vasen {
+    flex:80%;
+}
+
+/* Etusivun kuvalinkkiboxit  */
+.navigation_boxes {
+    margin-top:1em;
+}
+.navigation_boxes a:hover img {
+    opacity: 0.5;
+}
+/* Etusivun kuvalinkkiboxin yksittäinen ruutu */
+.boxi {
+    flex: 25%;
+    position: relative;
+    box-shadow: 0 0 15px black;
+}
+/* linkkiboxien kuvat */
+.boxi img, .boxi_mobile img {
+    width: 100%;
+    height:100%;
+}
+/* mobiililevyiset linkkiboxit, ei näy laajakuvassa */
+.boxi_mobile {
+    flex:100%;
+    display: none;
+}
+
+/* Harrastukset-alasivun kuvagalleria lightboxina */
+#kuvagalleria {
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin:1em 0em;
+    padding: 0.5em 0em;
+}
+/* Koodaamis-alasivun taulukko */
+.taulukko {
+    padding: 0.5em;
+    overflow-x:auto; /*tekee taulukosta responsiivisen*/
+}
+table, th, td, table caption {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding:0.5em;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+table caption {
+    font-weight: bold;
+}
+/* Biologia-alasivun lista */
+#julkaisut {
+    margin-top:1em;
+}
+#julkaisut ul {
+    list-style: inside square;
+    text-align: left;
+    padding-bottom:0.5em;
+    padding-left:1em;
+}
+
+/* KUVAT */
+/* GitHubin logo */
+#git {
+    width: 80%;
+    height: auto;
+    padding: 0.5em;
+}
+/* Biologia-alasivun linkkikuva */
+#logo {
+    width: 20%;
+    height: auto;
+    padding: 0.5em;
+}
+
+/* FOOTER */
+footer {
+    width: 80%;
+    color: black;
+    margin-top:3em;
+}
+footer p {
+    text-align: center;
+    padding: 0em 0em;
+}
+
+/* Responsiivisuus */
+@media (min-width: 320px) and (max-width: 1024px) {
+    .navigation_boxes, aside, .alalohko {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header_container, #header_navigationbar, main {
+        width: 100%;
+    }
+    .boxi_mobile {
+        display: block;
+    }
+    .boxi {
+        display: none;
+    }
+    p {
+        font-size: 1.1em;
+    }
+    .headernavi_boxi a {
+        font-size: 1.5em;
+    }
+    .header_text h1 {
+        font-size: 2.5em;
+    }
+    .taulukko {
+        width: 100%;
+    }
+    .kuvaus {
+        width: 100%;
+    }
+    .x {
+        display: none;
+    }
+}

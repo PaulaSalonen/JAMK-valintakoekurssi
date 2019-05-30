@@ -1,0 +1,25 @@
+table {
+    margin: 50px 0px 0px 50px;
+    border: 1px solid black;
+}
+#Asiakkaat {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+#Asiakkaat th {
+    border: 1px solid #5DBCD2; 
+    background-color:#96AFAB;
+    color:#FEF9EC;
+    padding: 5px 4px 5px 4px;
+    font-size: 1.2em;
+}
+#Asiakkaat td {
+    border: 1px solid #5DBCD2;
+    padding: 4px;
+}
+#Asiakkaat tr:nth-child(odd) {
+    background-color:#E6EBEE;
+}
+#Asiakkaat tr:nth-child(even) {
+    background-color:#FEF9EC;
+}
