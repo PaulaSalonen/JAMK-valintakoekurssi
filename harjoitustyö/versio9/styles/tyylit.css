@@ -11,8 +11,7 @@ body {
     display:flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
 }
 
 /* NAVIpalkki flexinä headerin yläpuolella 80% levyisenä */
@@ -43,36 +42,24 @@ nav a:hover {
 /* HEADER 80% levyisenä flexinä sisältö allekkain */
 .header_container {
     width: 80%;
-    background-image: url("../images/wood_board.jpg");
+    background-image: url("../images/Header_polku.jpg");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 /* Headerin iso pääotsikko kuvan päällä */
 .header_text {
     margin: 5em;
-    color:white;
+    color: white;
 }
 .header_text h1 {
     text-align: center;
     font-size: 2em;
     text-shadow: 3px 3px black;
-}
-.pieni{
-    width:25%;
-}
-#myphoto {
-    max-width: 70%;
-    margin:2em 2em 2em 3em;
-    align-self: flex-start;
-    border-radius: 50%;
-    box-shadow: 0 0 30px black;
-}
-.iso {
-    width: 75%;
-}
+} 
+
 /* sivun pääsisältö 80% leveydellä keskitettynä, 
 flexit osat allekkain */
 main {
@@ -83,34 +70,23 @@ main {
     align-items: center;
     text-align: center;
 }
-h2, h3, p {
-    margin:0.5em;
-    padding: 0.5em;
+h3, p {
+    margin: 0.5em;
+
+}
+h2 {
+    margin:1em 0.5em 0.5em 0.5em;
 }
 p {
     text-align: justify;
     padding: 0em 0.5em;
 }
 
-/* #sanapilvi {
-    font-family: 'Lakki Reddy', cursive;
-    font-size: 1.5em;
-    border:3px solid lightseagreen;
-} */
 /* Mainin sisällä allekkain olevat osiot */
 .kuvaus {
     width: 70%;
-    margin:0.5em 0em;
+    margin-bottom:1em;
 }
-
-/* Harrastusten kuvagalleria lightboxina */
-#kuvagalleria {
-    flex-flow: wrap;
-    justify-content: space-between;
-    margin:1em 0em;
-    padding: 0.5em 0em;
-}
-
 .rivit {
     display: flex;
     flex-direction: row;
@@ -122,7 +98,7 @@ p {
     flex:80%;
 }
 
-/* Etusivun kuvalinkkiboxit rivissä  */
+/* Etusivun kuvalinkkiboxit  */
 .navigation_boxes {
     margin-top:1em;
 }
@@ -140,33 +116,24 @@ p {
     width: 100%;
     height:100%;
 }
-
 /* mobiililevyiset linkkiboxit, ei näy laajakuvassa */
 .boxi_mobile {
     flex:100%;
     display: none;
 }
 
-
+/* Harrastukset-alasivun kuvagalleria lightboxina */
+#kuvagalleria {
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin:1em 0em;
+    padding: 0.5em 0em;
+}
+/* Koodaamis-alasivun taulukko */
 .taulukko {
     padding: 0.5em;
     overflow-x:auto; /*tekee taulukosta responsiivisen*/
 }
-#julkaisut {
-    margin-top:1em;
-}
-#julkaisut ul {
-    list-style: inside square;
-    text-align: left;
-    padding-bottom:0.5em;
-    padding-left:1em;
-}
-
-
-
-
-
-/* Koodaus sivun taulukko */
 table, th, td, table caption {
     border: 2px solid black;
     border-collapse: collapse;
@@ -177,28 +144,31 @@ table, th, td, table caption {
 table caption {
     font-weight: bold;
 }
-
-
-/* KUVAT */
-#koodari {
-    max-width: 80%;
-    padding:0.5em;
+/* Biologia-alasivun lista */
+#julkaisut {
+    margin-top:1em;
+}
+#julkaisut ul {
+    list-style: inside square;
+    text-align: left;
+    padding-bottom:0.5em;
+    padding-left:1em;
 }
 
-
+/* KUVAT */
+/* GitHubin logo */
 #git {
     width: 80%;
     height: auto;
     padding: 0.5em;
 }
-/* Biologia-osan linkkikuva */
+/* Biologia-alasivun linkkikuva */
 #logo {
     width: 20%;
     height: auto;
     padding: 0.5em;
 }
 
-    
 /* FOOTER */
 footer {
     width: 80%;
@@ -219,19 +189,13 @@ footer p {
     .header_container, #header_navigationbar, main {
         width: 100%;
     }
-    .header_container {
-        flex-direction: column;
-    }
-    .iso, .pieni {
-        width:100%;
-    }
     .boxi_mobile {
         display: block;
     }
     .boxi {
         display: none;
     }
-    * {
+    p {
         font-size: 1.1em;
     }
     .headernavi_boxi a {
@@ -245,5 +209,8 @@ footer p {
     }
     .kuvaus {
         width: 100%;
+    }
+    .x {
+        display: none;
     }
 }
