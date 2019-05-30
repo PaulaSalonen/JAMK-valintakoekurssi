@@ -59,6 +59,9 @@ nav a:hover {
     font-size: 2em;
     text-shadow: 3px 3px black;
 } 
+h1 {
+    font-family: 'Patrick Hand SC', cursive;
+}
 
 /* sivun pääsisältö 80% leveydellä keskitettynä, 
 flexit osat allekkain */
